@@ -1,0 +1,464 @@
+    :root {
+  /* ======================= */
+  /* Border Sizes */
+  /* ======================= */
+  --button-radius: 10px;
+
+  /* ======================= */
+  /* Colors */
+  /* ======================= */
+  /* Primary Colors */
+  --color-primary-fondo: #f1f0ea; /* Basics.White */
+  --color-primary-secciones-1: #112c50;
+
+  /* Secondary Colors */
+  --color-secondary-secciones-2: #b9cade;
+  --color-secondary-secciones-3: #d7c2b6;
+
+  /* Auxiliary Colors */
+  --color-aux-acentos-1: #c55a26;
+  --color-aux-acentos-2: #e3be86;
+  --color-aux-hover: #faa82a;
+
+  /* Basics */
+  --color-basics-black: #000000;
+  --color-basics-white: #f1f0ea;
+
+  /* Text Colors */
+  --color-text-primary: var(--color-basics-black);
+  --color-text-on-dark: var(--color-basics-white);
+
+  /* ======================= */
+  /* Typography Sizes */
+  /* ======================= */
+  --font-size-h1: 55px;
+  --font-size-h2: 36px;
+  --font-size-h3: 32px;
+  --font-size-h4: 18px;
+  --font-size-texto-destacado: 20px;
+  --font-size-parrafo: 16px;
+  --font-size-button-text: 14px;
+
+  /* Typography Weight */
+  --font-weight-parrafo: 400; /* Regular */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.top-bar{
+    background-color: var(--color-primary-secciones-1);
+    padding: 1%;
+}
+.top-bar a{
+    color: white;
+    text-decoration: none;
+}
+.top-bar-content{
+    justify-content: space-between;
+}
+
+body{
+    margin: 0;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+}
+.lenguage {
+  width: 20%;
+}
+header {
+    background-image: url(/assets/img/header-background.jpg);
+    height: 100%;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+}
+    
+.div4 {
+    grid-column-start: 2;
+}
+
+.div5 {
+    grid-column-start: 10;
+}
+
+.div6 {
+    grid-column-start: 11;
+}
+.logo{
+  grid-column-start: 2;
+}
+.nav-links{
+  width: 180%;
+}
+.nav-links li{
+  display: inline-block;
+  margin-right: 30px;
+}
+.nav-links li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.hero-content{
+  color: white;
+  padding-top: 1px;
+}
+.highlight{
+  font-weight: bold;
+  font-size: var(--font-size-texto-destacado);
+}
+.caja-derechos{
+  width: 100%;
+  font-size: 30px;
+  margin:0;
+  padding: 0;
+}
+.caja-derechos h1{
+  margin: 0;
+  padding: 0;
+}
+.hero-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 12px;
+}
+.div-hero-content {
+    grid-column: span 5 / span 5;
+    grid-row: span 7 / span 7;
+    grid-column-start: 2;
+}
+.caja-abogados{
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+    width: 70%;
+    margin:0;
+   padding: 0;
+}
+.parrafo{
+   margin: 0;
+   padding: 0;
+   font-size: 20px;
+   width: 80%;
+}
+.parrafo p{
+  margin: 0;
+  padding: 0;
+}
+.hero-buttons{
+  width: 80%;
+ justify-content: space-around;
+ margin-top: 30px;
+ height: 100px;
+}
+.btn{
+    padding: 15px 25px;
+    border-radius: var(--button-radius);
+    text-decoration: none;
+    font-size: var(--font-size-button-text);
+    font-weight: bold;
+    text-align: center;
+    
+}
+.primary{
+    background-color: var(--color-aux-acentos-2);
+    color: black;
+}
+.secondary{
+  background-color: var(--color-aux-acentos-1);
+  color: white;
+}
+.banner-text {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: #000;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.banner-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px; /* Ajusta el ancho según necesites */
+  height: 5px; /* Ajusta la altura según necesites */
+  background-color: #2a647f; /* Cambia el color según el tono de azul que desees */
+  margin-bottom: 8px;
+}
+.about{
+   display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    height: 510px;
+}
+.about article{
+    grid-column: span 6 / span 6;
+    grid-row: span 5 / span 5;
+    margin-top: 30px;
+}
+.about aside{
+    grid-column: span 5 / span 5;
+    grid-row: span 5 / span 5;
+    grid-column-start: 7;
+    margin-top: 30px;
+
+}
+.about aside img{
+    width: 100%;
+    border-radius: var(--button-radius);
+}
+.services{
+    background-image: url(/assets/img/techo-cristal.jpg);
+    color: white;
+    padding: 180px 0;
+    text-align: center;
+    padding-top: 100px;
+    height: 500px;
+    
+}
+.services h3{
+    font-size: 58px;
+    margin: 0;
+    padding: 0;
+}
+.services p{
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 20px;
+}
+.services a{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+}
+.service-caja{
+  width: 55%;
+  margin: 0 auto;
+}
+
+.parent-team{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 84%;
+}
+.team{
+  grid-column: span 12 / span 12;
+  grid-column-start: 4;
+  background-color: var(--color-secondary-secciones-2);
+  margin: 0px;
+  border-radius: 14px;
+  
+}
+.team h3{
+    width: 93% ;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.caja-bienvenida{
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    margin: 0px;
+    font-size: 31px;
+
+}
+.team-members{
+  justify-content: space-around;
+}
+.testimonials{
+  grid-column: span 14 / span 14;
+  grid-column-start: 1;
+  background-color: var(--color-primary-secciones-1);
+  margin-top: 40px;
+} 
+.testimonials blockquote{
+  width: 20%;
+  background-color: white;
+  padding: 15px;
+  margin: 0px 0px 10px 0px;
+    
+}
+.container{
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    margin-top: 10px;
+    color: white;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.container-bloques{
+  width: 84%;
+  margin: 0 auto;
+}
+.contact-form h3{
+  color: black;
+}
+
+.container-consulta{
+    margin-top: 10px;
+    color: white;
+    width: 200%;
+}
+.contact-form p{
+  width: 84%;
+  margin: 0 auto;
+}
+.contact-form form{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 80%;
+}
+.contact-form form input{
+  width: 100%;
+  padding: 10px;
+}
+.contact-form form .mensaje textarea{
+  width: 100%;
+  padding-bottom: 40px;
+}
+.nombre {
+    grid-column: span 5 / span 5;
+    grid-column-start: 2;
+}
+
+.apellidos {
+    grid-column: span 5 / span 5;
+    grid-column-start: 7;
+}
+
+.email {
+    grid-column: span 5 / span 5;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.titulo {
+    grid-column: span 5 / span 5;
+    grid-column-start: 7;
+    grid-row-start: 2;
+}
+
+.mensaje {
+    grid-column: span 10 / span 10;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.boton{
+  grid-column-start: 11;
+  grid-row-start: 4;
+}
+.location{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 84%;
+}
+.caja-location{
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    margin: 0px;
+    font-size: 31px;
+}
+.caja-location p{
+  font-size: 20px;
+  margin-top: 0;
+  width: 70%;
+}
+.map{
+  grid-column: span 12 / span 12;
+  grid-column-start: 4;
+}
+.map iframe{
+  width: 100%;
+  height: 300px;
+}
+.footer{
+  background-color: #112c50;
+  justify-content: space-around;
+  color: white;
+  margin-top: 20px;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer li{
+  list-style-type: none;
+  margin: 20px 0 20px 0;
+}
+.footer-nav ul{
+  margin: 0;
+  padding: 0;
+}
+.footer-logo{
+  margin-top: 30px;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+}
+.social-media{
+  margin-top: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.container-social-media{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.linea{
+  width: 3px;
+  height: 40px;
+  background-color: white;
+}
+.newsletter{
+  width: 15%;
+}
+.newsletter input{
+  width: 100%;
+  padding: 9px;
+}
+.newsletter button{
+  margin-top: 10px;
+}
+.container-button{
+  display: flex;
+  justify-content: end;
+}
+.button-footer{
+  background-color: #112c50;
+  color: white;
+  border: solid white;
+  border-radius: 20px;
+  padding: 10px;
+  width: 120px;
+}
+
+    
