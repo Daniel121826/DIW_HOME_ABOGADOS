@@ -1,54 +1,61 @@
-    :root {
-  /* ======================= */
-  /* Border Sizes */
-  /* ======================= */
-  --button-radius: 10px;
-
-  /* ======================= */
-  /* Colors */
-  /* ======================= */
-  /* Primary Colors */
-  --color-primary-fondo: #f1f0ea; /* Basics.White */
-  --color-primary-secciones-1: #112c50;
-
-  /* Secondary Colors */
-  --color-secondary-secciones-2: #b9cade;
-  --color-secondary-secciones-3: #d7c2b6;
-
-  /* Auxiliary Colors */
-  --color-aux-acentos-1: #c55a26;
-  --color-aux-acentos-2: #e3be86;
-  --color-aux-hover: #faa82a;
-
-  /* Basics */
-  --color-basics-black: #000000;
-  --color-basics-white: #f1f0ea;
-
-  /* Text Colors */
-  --color-text-primary: var(--color-basics-black);
-  --color-text-on-dark: var(--color-basics-white);
-
-  /* ======================= */
-  /* Typography Sizes */
-  /* ======================= */
-  --font-size-h1: 55px;
-  --font-size-h2: 36px;
-  --font-size-h3: 32px;
-  --font-size-h4: 18px;
-  --font-size-texto-destacado: 20px;
-  --font-size-parrafo: 16px;
-  --font-size-button-text: 14px;
-
-  /* Typography Weight */
-  --font-weight-parrafo: 400; /* Regular */
+   /* Colors */
+:root {
+  /* Mode 1 */
+  /* color */
+  --auxiliary-acentos-1: #c55a26;
+  --auxiliary-acentos-2: #e3be86;
+  --auxiliary-hover: #faa82a;
+  --basics-black: #000000;
+  --basics-white: #f1f0ea;
+  --primary-fondo: var(--basics-white);
+  --primary-secciones-1: #112c50;
+  --secondary-secciones-2: #b9cade;
+  --secondary-secciones-3: #d7c2b6;
+  --text-on-dark: var(--basics-white);
+  --text-primary: var(--basics-black);
+}
+/* Typography */
+:root {
+  /* Mode 1 */
+  /* number */
+  --size-button-text: 0.875rem;
+  --size-parrafo: 1rem;
+  --size-h4: 1.125rem;
+  --size-texto-destacado: 1.25rem;
+  --size-h3: 2rem;
+  --size-h2: 2.25rem;
+  --size-h1: 3.4375rem;
+  /* string */
+  --weight-parrafo: Regular;
+}
+/* Borders-SIzes */
+:root {
+  /* Mode 1 */
+  /* number */
+  --radius-button-radius: 0.625rem;
 }
 
 * {
   box-sizing: border-box;
 }
-
+p{
+  font-size: var(--size-parrafo);
+  font-weight: var(--weight-parrafo);
+}
+h1{
+  font-size: var(--size-h1);
+}
+h3{
+  font-size: var(--size-h3);
+}
+h2{
+  font-size: var(--size-h2);
+}
+h4{
+  font-size: var(--size-h4);
+}
 .top-bar{
-    background-color: var(--color-primary-secciones-1);
+    background-color: var(--primary-secciones-1);
     padding: 1%;
 }
 .top-bar a{
@@ -115,7 +122,7 @@ header {
 }
 .highlight{
   font-weight: bold;
-  font-size: var(--font-size-texto-destacado);
+  font-size: var(--size-texto-destacado);
 }
 .caja-derechos{
   width: 100%;
@@ -126,6 +133,7 @@ header {
 .caja-derechos h1{
   margin: 0;
   padding: 0;
+  font-size: var(--size-h1);
 }
 .hero-content {
     display: grid;
@@ -149,7 +157,7 @@ header {
 .parrafo{
    margin: 0;
    padding: 0;
-   font-size: 20px;
+   font-size: var(--size-parrafo);
    width: 80%;
 }
 .parrafo p{
@@ -157,8 +165,8 @@ header {
   padding: 0;
 }
 .hero-buttons{
-  width: 80%;
- justify-content: space-around;
+width: 80%;
+ justify-content: space-between;
  margin-top: 30px;
  height: 100px;
 }
@@ -166,24 +174,24 @@ header {
     padding: 15px 25px;
     border-radius: var(--button-radius);
     text-decoration: none;
-    font-size: var(--font-size-button-text);
+    font-size: var(--size-button-text);
     font-weight: bold;
     text-align: center;
     
 }
 .primary{
-    background-color: var(--color-aux-acentos-2);
-    color: black;
+    background-color: var(--auxiliary-acentos-2);
+    color: var(--basics-black);
 }
 .secondary{
-  background-color: var(--color-aux-acentos-1);
-  color: white;
+  background-color: var(--auxiliary-acentos-1);
+  color: var(--basics-white);
 }
 .banner-text {
   position: relative;
   font-family: Arial, sans-serif;
   font-size: 1.2em;
-  color: #000;
+  color: var(--basics-black);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -231,7 +239,7 @@ header {
     
 }
 .services h3{
-    font-size: 58px;
+    font-size: var(--size-h3);
     margin: 0;
     padding: 0;
 }
@@ -263,7 +271,7 @@ header {
 .team{
   grid-column: span 12 / span 12;
   grid-column-start: 4;
-  background-color: var(--color-secondary-secciones-2);
+  background-color: var(--secondary-secciones-2);
   margin: 0px;
   border-radius: 14px;
   
@@ -273,6 +281,7 @@ header {
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-size: var(--size-h3);
 }
 .caja-bienvenida{
     grid-column: span 3 / span 3;
@@ -287,12 +296,12 @@ header {
 .testimonials{
   grid-column: span 14 / span 14;
   grid-column-start: 1;
-  background-color: var(--color-primary-secciones-1);
+  background-color: var(--primary-secciones-1);
   margin-top: 40px;
 } 
 .testimonials blockquote{
   width: 20%;
-  background-color: white;
+  background-color: var(--basics-white);
   padding: 15px;
   margin: 0px 0px 10px 0px;
     
@@ -301,7 +310,7 @@ header {
     grid-column: span 3 / span 3;
     grid-column-start: 1;
     margin-top: 10px;
-    color: white;
+    color: var(--basics-white);
 }
 .justify-content-between {
     justify-content: space-between;
@@ -311,12 +320,13 @@ header {
   margin: 0 auto;
 }
 .contact-form h3{
-  color: black;
+  color: var(--basics-black);
+  font-size: var(--size-h3);
 }
 
 .container-consulta{
     margin-top: 10px;
-    color: white;
+    color: var(--basics-white);
     width: 200%;
 }
 .contact-form p{
@@ -399,14 +409,14 @@ header {
   height: 300px;
 }
 .footer{
-  background-color: #112c50;
+  background-color: var(--primary-secciones-1);
   justify-content: space-around;
   color: white;
   margin-top: 20px;
 }
 footer a{
   text-decoration: none;
-  color: white;
+  color: var(--basics-white);
 }
 footer li{
   list-style-type: none;
@@ -436,7 +446,7 @@ footer li{
 .linea{
   width: 3px;
   height: 40px;
-  background-color: white;
+  background-color: var(--basics-white);
 }
 .newsletter{
   width: 15%;
@@ -453,9 +463,9 @@ footer li{
   justify-content: end;
 }
 .button-footer{
-  background-color: #112c50;
-  color: white;
-  border: solid white;
+  background-color: var(--primary-secciones-1);
+  color: var(--basics-white);
+  border: solid var(--basics-white);
   border-radius: 20px;
   padding: 10px;
   width: 120px;
